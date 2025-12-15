@@ -1,4 +1,5 @@
-import { MapPin, Mail, Linkedin, ChevronDown, User } from 'lucide-react';
+import { MapPin, Mail, Linkedin, ChevronDown } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 const HeroSection = () => {
   return (
@@ -24,10 +25,11 @@ const HeroSection = () => {
             style={{ animationDelay: '0.1s' }}
           >
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-xl shadow-primary/20">
-              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                {/* Placeholder - substituir pela foto real */}
-                <User size={64} className="text-muted-foreground/50" />
-              </div>
+              <img 
+                src={profilePhoto} 
+                alt="Thiago Tomoyuki" 
+                className="w-full h-full rounded-full object-cover"
+              />
             </div>
             {/* Status indicator */}
             <div className="absolute bottom-2 right-2 w-5 h-5 bg-green-500 rounded-full border-4 border-card animate-pulse" />
