@@ -17,7 +17,7 @@ const HeroSection = () => {
           {/* Profile Photo */}
           <div style={{
           animationDelay: '0.1s'
-        }} className="relative inline-block mb-8 animate-fade-up mx-[10px]">
+        }} className="relative inline-block mb-8 animate-fade-up mx-[60px]">
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-xl shadow-primary/20">
               <img src={profilePhoto} alt="Thiago Tomoyuki" className="w-full h-full rounded-full object-cover" />
             </div>
