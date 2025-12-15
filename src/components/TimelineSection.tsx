@@ -84,17 +84,23 @@ const getTypeLabel = (type: TimelineItem['type']) => {
 
 const TimelineSection = () => {
   return (
-    <section id="trajetoria" className="py-24 bg-background">
-      <div className="container">
+    <section id="trajetoria" className="py-24 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/3 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/3 rounded-full blur-[100px]" />
+      
+      <div className="container relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-primary text-sm font-semibold mb-4 border border-primary/20">
+            <span className="w-2 h-2 rounded-full bg-primary" />
             Trajetória
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Experiência & Formação
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <span className="text-foreground">Experiência & </span>
+            <span className="text-gradient">Formação</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Uma jornada de aprendizado contínuo em gestão de projetos e desenvolvimento de produtos digitais.
           </p>
         </div>
@@ -128,7 +134,7 @@ const TimelineSection = () => {
                     isEven ? 'md:pr-8' : 'md:pl-8'
                   }`}
                 >
-                  <div className="bg-card rounded-xl p-6 shadow-sm border border-border card-hover">
+                  <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300">
                     {/* Type Badge */}
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${

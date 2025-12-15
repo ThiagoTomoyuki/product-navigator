@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { label: 'Início', href: '#inicio' },
@@ -42,11 +43,13 @@ const Header = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="relative text-sm font-medium text-muted-foreground hover:text-primary transition-colors group"
             >
               {item.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -73,6 +76,9 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
+            <div className="pt-2 border-t border-border">
+              <ThemeToggle />
+            </div>
           </div>
         </nav>
       )}
