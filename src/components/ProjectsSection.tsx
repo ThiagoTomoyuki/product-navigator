@@ -127,77 +127,78 @@ const ProjectsSection = () => {
           })}
         </div>
 
-        {/* Modal */}
-        {selectedProject && (
+      </div>
+
+      {/* Modal - Outside container to avoid z-index issues */}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-foreground/50 backdrop-blur-sm animate-fade-in"
+          onClick={() => setSelectedProject(null)}
+        >
           <div
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-foreground/50 backdrop-blur-sm animate-fade-in"
-            onClick={() => setSelectedProject(null)}
+            className="bg-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl animate-fade-up"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div
-              className="bg-card rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl animate-fade-up"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Modal Header */}
-              <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between z-10">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl overflow-hidden">
-                    <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {selectedProject.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {selectedProject.subtitle}
-                    </p>
-                  </div>
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between z-10">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl overflow-hidden">
+                  <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
                 </div>
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="p-2 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
-                >
-                  <X size={20} />
-                </button>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {selectedProject.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {selectedProject.subtitle}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="p-2 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 space-y-6">
+              {/* Context */}
+              <div>
+                <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
+                  Contexto
+                </h4>
+                <p className="text-foreground text-justify">{selectedProject.context}</p>
               </div>
 
-              {/* Modal Content */}
-              <div className="p-6 space-y-6">
-                {/* Context */}
-                <div>
-                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-                    Contexto
-                  </h4>
-                  <p className="text-foreground text-justify">{selectedProject.context}</p>
-                </div>
+              {/* Challenge */}
+              <div>
+                <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
+                  Desafio
+                </h4>
+                <p className="text-foreground text-justify">{selectedProject.challenge}</p>
+              </div>
 
-                {/* Challenge */}
-                <div>
-                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-                    Desafio
-                  </h4>
-                  <p className="text-foreground text-justify">{selectedProject.challenge}</p>
-                </div>
+              {/* Solution */}
+              <div>
+                <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
+                  Solução
+                </h4>
+                <p className="text-foreground text-justify">{selectedProject.solution}</p>
+              </div>
 
-                {/* Solution */}
-                <div>
-                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-                    Solução
-                  </h4>
-                  <p className="text-foreground text-justify">{selectedProject.solution}</p>
-                </div>
-
-                {/* Result */}
-                <div className="bg-primary/5 rounded-xl p-4 border border-primary/10">
-                  <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
-                    Resultado
-                  </h4>
-                  <p className="text-foreground text-justify">{selectedProject.result}</p>
-                </div>
+              {/* Result */}
+              <div className="bg-primary/5 rounded-xl p-4 border border-primary/10">
+                <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
+                  Resultado
+                </h4>
+                <p className="text-foreground text-justify">{selectedProject.result}</p>
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 };
