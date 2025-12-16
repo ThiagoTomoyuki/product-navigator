@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { BarChart3, Package, ShieldCheck, ChevronRight, X } from 'lucide-react';
+import { ChevronRight, X } from 'lucide-react';
+import baseIcon from '@/assets/base-icon.jpeg';
+import contagemIcon from '@/assets/contagem-icon.jpeg';
+import prevencaoIcon from '@/assets/prevencao-icon.jpeg';
 
 interface Project {
   id: string;
   title: string;
   subtitle: string;
-  icon: React.ElementType;
-  color: string;
+  image: string;
   context: string;
   challenge: string;
   solution: string;
@@ -18,8 +20,7 @@ const projects: Project[] = [
     id: 'base',
     title: 'Base by Hipcom',
     subtitle: 'Inteligência para Decisões',
-    icon: BarChart3,
-    color: 'bg-primary',
+    image: baseIcon,
     context:
       'Donos de supermercados recebem muita informação todos os dias, mas não conseguem enxergar o que realmente importa. Os dados estão espalhados e cansativos de consultar, gerando atrasos, erros e perda de oportunidades de vendas.',
     challenge:
@@ -33,8 +34,7 @@ const projects: Project[] = [
     id: 'contagem',
     title: 'Contagem by Hipcom',
     subtitle: 'Módulo de Inventário',
-    icon: Package,
-    color: 'bg-accent',
+    image: contagemIcon,
     context:
       'Contar estoque no supermercado é complicado. O gerente precisa garantir que o estoque está certo, registrar quem pegou o quê e manter histórico. Muitos ainda usam papel, gerando confusão e perda de informação.',
     challenge:
@@ -48,8 +48,7 @@ const projects: Project[] = [
     id: 'prevencao',
     title: 'Prevenção by Hipcom',
     subtitle: 'Módulo de Validade',
-    icon: ShieldCheck,
-    color: 'bg-primary',
+    image: prevencaoIcon,
     context:
       'Produtos vencidos é dinheiro jogado fora. O gerente precisa saber quais produtos estão para vencer, quais venceram hoje e ontem. Sem controle, isso gera perda de receita e frustração.',
     challenge:
@@ -90,7 +89,6 @@ const ProjectsSection = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => {
-            const Icon = project.icon;
             return (
               <button
                 key={project.id}
@@ -99,10 +97,8 @@ const ProjectsSection = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon */}
-                <div
-                  className={`w-14 h-14 rounded-2xl ${project.color} flex items-center justify-center mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <Icon size={28} className="text-primary-foreground" />
+                <div className="w-14 h-14 rounded-2xl overflow-hidden mb-6 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform duration-300">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 </div>
 
                 {/* Title */}
@@ -134,7 +130,7 @@ const ProjectsSection = () => {
         {/* Modal */}
         {selectedProject && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-foreground/50 backdrop-blur-sm animate-fade-in"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-foreground/50 backdrop-blur-sm animate-fade-in"
             onClick={() => setSelectedProject(null)}
           >
             <div
@@ -142,15 +138,10 @@ const ProjectsSection = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between">
+              <div className="sticky top-0 bg-card border-b border-border p-6 flex items-start justify-between z-10">
                 <div className="flex items-center gap-4">
-                  <div
-                    className={`w-12 h-12 rounded-xl ${selectedProject.color} flex items-center justify-center`}
-                  >
-                    <selectedProject.icon
-                      size={24}
-                      className="text-primary-foreground"
-                    />
+                  <div className="w-12 h-12 rounded-xl overflow-hidden">
+                    <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-foreground">
