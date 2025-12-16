@@ -81,7 +81,7 @@ const ProjectsSection = () => {
             <span className="text-foreground">Cases de </span>
             <span className="text-gradient">Produto</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg text-justify">
             Cada produto nasceu de conversas reais com clientes como Cofesa Supermercados, Supermercado Violeta e Rolim Supermercado. 
             Escutei o que incomodava, entendi o negócio e entreguei exatamente o que precisava.
           </p>
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
                 </p>
 
                 {/* Preview */}
-                <p className="text-sm text-foreground/70 line-clamp-3 mb-6">
+                <p className="text-sm text-foreground/70 line-clamp-3 mb-6 text-justify">
                   {project.context}
                 </p>
 
@@ -176,7 +176,7 @@ const ProjectsSection = () => {
                   <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
                     Contexto
                   </h4>
-                  <p className="text-foreground">{selectedProject.context}</p>
+                  <p className="text-foreground text-justify">{selectedProject.context}</p>
                 </div>
 
                 {/* Challenge */}
@@ -184,7 +184,7 @@ const ProjectsSection = () => {
                   <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
                     Desafio
                   </h4>
-                  <p className="text-foreground">{selectedProject.challenge}</p>
+                  <p className="text-foreground text-justify">{selectedProject.challenge}</p>
                 </div>
 
                 {/* Solution */}
@@ -192,7 +192,7 @@ const ProjectsSection = () => {
                   <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
                     Solução
                   </h4>
-                  <p className="text-foreground">{selectedProject.solution}</p>
+                  <p className="text-foreground text-justify">{selectedProject.solution}</p>
                 </div>
 
                 {/* Result */}
@@ -200,7 +200,7 @@ const ProjectsSection = () => {
                   <h4 className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
                     Resultado
                   </h4>
-                  <p className="text-foreground">{selectedProject.result}</p>
+                  <p className="text-foreground text-justify">{selectedProject.result}</p>
                 </div>
               </div>
             </div>
