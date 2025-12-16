@@ -42,7 +42,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Bio */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up leading-relaxed" style={{
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up leading-relaxed text-justify" style={{
           animationDelay: '0.3s'
         }}>
             Engenheiro de Computação pelo IMT com especialização em Gestão de Projetos. 

@@ -100,7 +100,7 @@ const TimelineSection = () => {
             <span className="text-foreground">Experiência & </span>
             <span className="text-gradient">Formação</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg text-justify">
             Uma jornada de aprendizado contínuo em gestão de projetos e desenvolvimento de produtos digitais.
           </p>
         </div>
@@ -160,7 +160,7 @@ const TimelineSection = () => {
                     <p className="text-xs text-muted-foreground mb-3">{item.period}</p>
 
                     {/* Description */}
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-muted-foreground mb-4 text-justify">
                       {item.description}
                     </p>
 
