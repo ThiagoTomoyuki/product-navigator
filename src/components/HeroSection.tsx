@@ -44,7 +44,7 @@ const HeroSection = () => {
           {/* Bio */}
           <p style={{
           animationDelay: '0.3s'
-        }} className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up leading-relaxed text-justify md:text-base">
+        }} className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8 animate-fade-up leading-relaxed text-justify md:text-base px-4">
             Meu nome é Thiago Tomoyuki. Sou Engenheiro de Computação formado pelo IMT e especializado em Gestão de Projetos pela São Judas. Tenho 4 anos de experiência como Product Owner na Hipcom ERP, empresa que trabalha com sistemas de gestão para varejo e já atende mais de 600 clientes.
 
 Trabalho com empresas reais, principalmente supermercados. Meu dia a dia é transformar o que o cliente precisa em soluções práticas que funcionam. Tenho certificação de Product Owner Ágil (CSPO) e domino ferramentas como Jira, Figma, MySQL e metodologias Scrum. Minha força está em entender o negócio do cliente e entregar produtos que realmente resolvem problemas.
