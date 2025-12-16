@@ -17,7 +17,7 @@ const HeroSection = () => {
           {/* Profile Photo */}
           <div style={{
           animationDelay: '0.1s'
-        }} className="relative inline-block mb-8 animate-fade-up mx-[60px]">
+        }} className="relative inline-block mb-8 animate-fade-up">
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-xl shadow-primary/20">
               <img src={profilePhoto} alt="Thiago Tomoyuki" className="w-full h-full rounded-full object-cover" />
             </div>
@@ -45,9 +45,9 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-up leading-relaxed" style={{
           animationDelay: '0.3s'
         }}>
-            Engenheiro de Computação com 4 anos de experiência em gestão de projetos de tecnologia. 
-            Especialista em desenvolvimento de produtos digitais e aplicativos para o mercado de varejo, 
-            transformando necessidades de negócio em soluções tecnológicas de impacto.
+            Engenheiro de Computação pelo IMT com especialização em Gestão de Projetos. 
+            4 anos como Product Owner na Hipcom ERP, desenvolvendo soluções para varejo que atendem mais de 600 clientes.
+            Transformo problemas reais em produtos que funcionam — entendendo o negócio e entregando resultados concretos.
           </p>
 
           {/* Contact Info */}

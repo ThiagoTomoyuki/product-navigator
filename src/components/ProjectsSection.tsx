@@ -17,17 +17,17 @@ const projects: Project[] = [
   {
     id: 'base',
     title: 'Base by Hipcom',
-    subtitle: 'Dashboard de Inteligência de Negócios',
+    subtitle: 'Inteligência para Decisões',
     icon: BarChart3,
     color: 'bg-primary',
     context:
-      'Gestores de varejo precisavam acessar dados de performance de suas lojas de forma rápida e centralizada para tomar decisões estratégicas.',
+      'Donos de supermercados recebem muita informação todos os dias, mas não conseguem enxergar o que realmente importa. Os dados estão espalhados e cansativos de consultar, gerando atrasos, erros e perda de oportunidades de vendas.',
     challenge:
-      'Transformar dados brutos em informações úteis para apoiar a tomada de decisões. Mostrar informações essenciais de maneira prática, facilmente acessível e em tempo real.',
+      'Transformar dados brutos em informações úteis para apoiar a tomada de decisões rápidas sobre estoque, preço, promoções e gestão da loja de forma prática e em tempo real.',
     solution:
-      'Desenvolvimento de aplicativo com visualização de dados em gráficos e tabelas interativos. Sistema permite alternar entre lojas com permissão do usuário. Inclui assistente inteligente que indica graficos desejados através de conversa natural.',
+      'Aplicativo simples e intuitivo onde o dono da loja vê todos os dados importantes em um único lugar, com gráficos e tabelas em tempo real. Inclui assistente de IA que conversa com o usuário e indica exatamente onde estão as informações desejadas. Gerentes com múltiplas lojas conseguem alternar entre elas no mesmo lugar.',
     result:
-      'Visualização centralizada dos dados importantes em um único lugar de maneira intuitiva, objetiva e clara de todos os setores. Economia significativa de tempo para os gestores na tomada de decisões estratégicas.',
+      'Gestores economizam tempo e tomam decisões em minutos ao invés de horas. Visão clara e centralizada de tudo o que acontece na empresa, melhorando a qualidade das decisões e aumentando a eficiência dos negócios.',
   },
   {
     id: 'contagem',
@@ -36,13 +36,13 @@ const projects: Project[] = [
     icon: Package,
     color: 'bg-accent',
     context:
-      'Equipes de estoque enfrentavam dificuldades para realizar contagens precisas e manter histórico confiável dos ajustes realizados.',
+      'Contar estoque no supermercado é complicado. O gerente precisa garantir que o estoque está certo, registrar quem pegou o quê e manter histórico. Muitos ainda usam papel, gerando confusão e perda de informação.',
     challenge:
-      'Ajustar os estoques de forma eficaz e confiável, com visibilidade completa do histórico de envios e ajustes dos usuários.',
+      'Ajustar os estoques de forma eficaz e confiável, com rastreabilidade completa de quem ajustou, quantos produtos foram enviados e histórico de todas as operações.',
     solution:
-      'Aplicação onde o usuário seleciona produtos para alteração de estoque. Sistema gerencial paralelo permite que gestores visualizem quantidade de envios e produtos ajustados por cada usuário.',
+      'Duas ferramentas conectadas: aplicativo para o balconista selecionar e ajustar produtos de forma rápida, e sistema gerencial para o gestor visualizar quantidade de produtos ajustados por funcionário, envios realizados e histórico completo.',
     result:
-      'Mais eficiência na coleta e contagem dos produtos. Eliminação de papéis no processo. Melhora na organização dos envios e melhor gerenciamento das quantidades ajustadas nos estoques.',
+      'Coleta de produtos mais eficiente, eliminação de papel no processo, envios bem organizados e rastreáveis. Gerente com controle total e estoque sempre correto, diminuindo problemas de descuadro.',
   },
   {
     id: 'prevencao',
@@ -51,13 +51,13 @@ const projects: Project[] = [
     icon: ShieldCheck,
     color: 'bg-primary',
     context:
-      'Lojas de varejo enfrentavam perdas significativas por produtos vencidos, sem sistema eficiente para controle preventivo de validades.',
+      'Produtos vencidos é dinheiro jogado fora. O gerente precisa saber quais produtos estão para vencer, quais venceram hoje e ontem. Sem controle, isso gera perda de receita e frustração.',
     challenge:
-      'Gerenciamento de produtos vencidos, que vencem hoje e que estão para vencer. Ajudar o chão de loja a controlar as validades dos produtos de forma proativa.',
+      'Gerenciar validades de produtos de forma proativa, identificando o que vence em breve e permitindo ações antes que o produto expire na prateleira.',
     solution:
-      'Aplicação para gerenciamento completo de validades, permitindo retirada de produtos antes do vencimento. Sistema possibilita criação de estratégias preventivas para evitar que produtos cheguem ao vencimento.',
+      'Aplicativo onde o encarregado gerencia validades e visualiza produtos próximos do vencimento. Sistema permite criar estratégias como promoções antes do vencimento, realocação na gôndola ou doação.',
     result:
-      'Melhora significativa no controle de produtos. Diminuição da perda por vencimento. Redução da quebra de produtos e melhoria na receita da empresa.',
+      'Menos produtos vencidos chegando à prateleira, redução de perdas e quebras. Funcionários agem antes do vencimento, melhorando a receita da loja com ganho financeiro real.',
   },
 ];
 
@@ -82,7 +82,8 @@ const ProjectsSection = () => {
             <span className="text-gradient">Produto</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Soluções desenvolvidas para o mercado de varejo, focadas em eficiência operacional e tomada de decisão.
+            Cada produto nasceu de conversas reais com clientes como Cofesa Supermercados, Supermercado Violeta e Rolim Supermercado. 
+            Escutei o que incomodava, entendi o negócio e entreguei exatamente o que precisava.
           </p>
         </div>
 
