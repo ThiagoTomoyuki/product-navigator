@@ -11,18 +11,11 @@ interface TimelineItem {
 
 const timelineData: TimelineItem[] = [
   {
-    type: 'work',
-    title: 'Consultor de Projetos | Product Owner',
-    organization: 'Hipcom ERP',
-    period: 'Out 2022 - Atual',
-    description:
-      'Responsável pela gestão de projetos de tecnologia junto aos clientes do mercado de Varejo, desde análises estratégicas até a construção do cronograma de projetos.',
-    highlights: [
-      'Liderança de Squads multidisciplinares com 4 pessoas',
-      'Desenvolvimento do aplicativo "Base by Hipcom"',
-      'Relacionamento com clientes como Cofesa, Violeta e Rolim',
-      'Gestão de Sprints e pipeline de entregas',
-    ],
+    type: 'education',
+    title: 'Bacharelado em Engenharia de Computação',
+    organization: 'IMT - Instituto Mauá de Tecnologia',
+    period: 'Concluído em 2022',
+    description: 'Formação sólida em computação e engenharia de software.',
   },
   {
     type: 'work',
@@ -38,6 +31,20 @@ const timelineData: TimelineItem[] = [
     ],
   },
   {
+    type: 'work',
+    title: 'Consultor de Projetos | Product Owner',
+    organization: 'Hipcom ERP',
+    period: 'Out 2022 - Atual',
+    description:
+      'Responsável pela gestão de projetos de tecnologia junto aos clientes do mercado de Varejo, desde análises estratégicas até a construção do cronograma de projetos.',
+    highlights: [
+      'Liderança de Squads multidisciplinares com 4 pessoas',
+      'Desenvolvimento do aplicativo "Base by Hipcom"',
+      'Relacionamento com clientes como Cofesa, Violeta e Rolim',
+      'Gestão de Sprints e pipeline de entregas',
+    ],
+  },
+  {
     type: 'education',
     title: 'Pós-Graduação em Gestão de Projetos de TI',
     organization: 'Universidade São Judas Tadeu',
@@ -45,18 +52,18 @@ const timelineData: TimelineItem[] = [
     description: 'Especialização em Gestão de Projetos de TI e Metodologias Ágeis.',
   },
   {
-    type: 'education',
-    title: 'Bacharelado em Engenharia de Computação',
-    organization: 'IMT - Instituto Mauá de Tecnologia',
-    period: 'Concluído em 2022',
-    description: 'Formação sólida em computação e engenharia de software.',
-  },
-  {
     type: 'certification',
     title: 'Certified Scrum Product Owner® (CSPO)',
     organization: 'Scrum Alliance | K21 Educação',
     period: '2024',
     description: 'Certificação oficial em Product Ownership com metodologia Scrum.',
+  },
+  {
+    type: 'certification',
+    title: 'AI Product Specialist',
+    organization: 'PM3',
+    period: 'Jun 2026',
+    description: 'Certificação em especialização de produtos com inteligência artificial.',
   },
 ];
 
